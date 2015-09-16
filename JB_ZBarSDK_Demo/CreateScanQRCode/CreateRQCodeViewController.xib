@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateRQCodeViewController">
+            <connections>
+                <outlet property="testImageView" destination="LgT-EX-cnt" id="A01-x9-pti"/>
+                <outlet property="testTextField" destination="gyE-4u-QNR" id="Ei3-of-LVm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入二维码内容" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gyE-4u-QNR">
+                    <rect key="frame" x="55" y="50" width="210" height="31"/>
+                    <color key="backgroundColor" red="0.78379644795610626" green="0.77167966352746198" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="210" id="L0c-om-Lzu"/>
+                        <constraint firstAttribute="height" constant="31" id="ZBC-WH-weR"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="zR6-sr-bls"/>
+                    </connections>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LgT-EX-cnt">
+                    <rect key="frame" x="40" y="161" width="240" height="240"/>
+                    <color key="backgroundColor" red="0.9260048817644303" green="0.9357230734851878" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="gGe-5j-vjo"/>
+                        <constraint firstAttribute="height" constant="240" id="obQ-8H-Xva"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P97-e0-bx9">
+                    <rect key="frame" x="55" y="111" width="96" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="84K-Ek-aA3"/>
+                        <constraint firstAttribute="width" constant="96" id="FHj-Ho-Nty"/>
+                    </constraints>
+                    <state key="normal" title="生成二维码">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="nFv-Wk-Cg0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Za1-0f-CUJ">
+                    <rect key="frame" x="176" y="111" width="89" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="89" id="HHb-ve-DSH"/>
+                        <constraint firstAttribute="height" constant="30" id="ZoX-ID-0Qd"/>
+                    </constraints>
+                    <state key="normal" title="保存到相册">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClicked:" destination="-1" eventType="touchUpInside" id="c8J-j3-gBo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="LgT-EX-cnt" secondAttribute="centerX" id="6T1-Xa-YFK"/>
+                <constraint firstItem="P97-e0-bx9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="55" id="B8o-gm-OZN"/>
+                <constraint firstItem="Za1-0f-CUJ" firstAttribute="top" secondItem="gyE-4u-QNR" secondAttribute="bottom" constant="30" id="M9l-8F-WuK"/>
+                <constraint firstItem="gyE-4u-QNR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="UBc-Cs-M7g"/>
+                <constraint firstAttribute="centerX" secondItem="gyE-4u-QNR" secondAttribute="centerX" id="bio-d2-hiT"/>
+                <constraint firstItem="LgT-EX-cnt" firstAttribute="top" secondItem="gyE-4u-QNR" secondAttribute="bottom" constant="80" id="exo-Zc-7rr"/>
+                <constraint firstAttribute="trailing" secondItem="Za1-0f-CUJ" secondAttribute="trailing" constant="55" id="nhg-Wf-vho"/>
+                <constraint firstItem="P97-e0-bx9" firstAttribute="top" secondItem="gyE-4u-QNR" secondAttribute="bottom" constant="30" id="wL8-nU-RxZ"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="374" y="320"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
