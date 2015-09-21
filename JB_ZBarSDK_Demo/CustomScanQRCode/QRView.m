@@ -23,16 +23,6 @@
     return self;
 }
 
-- (void)layoutSubviews {
-    
-    [super layoutSubviews];
-    
-    if(!isStop){
-        [self initLine];
-        [self startAnimation];
-    }
-}
-
 - (void)initLine {
     if(!_line){
         _line  = [[UIImageView alloc] init];
@@ -44,10 +34,10 @@
 }
 
 - (void)layoutLine{
-    __weak QRView *weakSelf = self;
+    __weak __typeof(self) weakSelf = self;
     [_line mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf).with.offset((weakSelf.bounds.size.height - weakSelf.transparentArea.height) / 2-50);
-        make.left.equalTo(weakSelf).with.offset((weakSelf.bounds.size.width- weakSelf.transparentArea.width) / 2);
+        make.centerX.equalTo(weakSelf);
+        make.centerY.equalTo(weakSelf).with.offset(-40-110+6);
         make.size.mas_equalTo(CGSizeMake(self.transparentArea.width, 12));
     }];
 }
@@ -71,7 +61,10 @@
 - (void)startScan{
     if(_line){
         isStop = NO;
-        [self addSubview:_line];
+        if(nil == _line.superview){
+            [self addSubview:_line];
+        }
+        [self startAnimation];
     }
 }
 
@@ -87,8 +80,8 @@
     CGRect screenDrawRect =CGRectMake(0, 0, viewSize.width,viewSize.height);
     
     //中间清空的矩形框
-    CGRect clearDrawRect = CGRectMake((screenDrawRect.size.width- self.transparentArea.width) / 2,
-                                      (screenDrawRect.size.height - self.transparentArea.height) / 2 -50 ,
+    CGRect clearDrawRect = CGRectMake(screenDrawRect.size.width / 2 - self.transparentArea.width / 2,
+                                      screenDrawRect.size.height / 2 - self.transparentArea.height / 2 -40,
                                       self.transparentArea.width,self.transparentArea.height);
     
     CGContextRef ctx = UIGraphicsGetCurrentContext();
