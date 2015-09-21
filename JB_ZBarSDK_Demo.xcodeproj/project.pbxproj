@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		735ED3FD1BB02F3300FEB8D6 /* create.gif in Resources */ = {isa = PBXBuildFile; fileRef = 735ED3FA1BB02F3300FEB8D6 /* create.gif */; settings = {ASSET_TAGS = (); }; };
+		735ED3FE1BB02F3300FEB8D6 /* customScan.gif in Resources */ = {isa = PBXBuildFile; fileRef = 735ED3FB1BB02F3300FEB8D6 /* customScan.gif */; settings = {ASSET_TAGS = (); }; };
+		735ED3FF1BB02F3300FEB8D6 /* normalScan.gif in Resources */ = {isa = PBXBuildFile; fileRef = 735ED3FC1BB02F3300FEB8D6 /* normalScan.gif */; settings = {ASSET_TAGS = (); }; };
 		73A137BD1BA6EA660033016A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A137BC1BA6EA660033016A /* AVFoundation.framework */; };
 		73A137BF1BA6EA760033016A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A137BE1BA6EA760033016A /* CoreMedia.framework */; };
 		73A137C11BA6EA7D0033016A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A137C01BA6EA7D0033016A /* CoreVideo.framework */; };
@@ -62,6 +65,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		735ED3FA1BB02F3300FEB8D6 /* create.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = create.gif; sourceTree = "<group>"; };
+		735ED3FB1BB02F3300FEB8D6 /* customScan.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = customScan.gif; sourceTree = "<group>"; };
+		735ED3FC1BB02F3300FEB8D6 /* normalScan.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = normalScan.gif; sourceTree = "<group>"; };
 		73A137BC1BA6EA660033016A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		73A137BE1BA6EA760033016A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		73A137C01BA6EA7D0033016A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -185,6 +191,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		735ED3F91BB02ED100FEB8D6 /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				735ED3FA1BB02F3300FEB8D6 /* create.gif */,
+				735ED3FB1BB02F3300FEB8D6 /* customScan.gif */,
+				735ED3FC1BB02F3300FEB8D6 /* normalScan.gif */,
+			);
+			path = screenshots;
+			sourceTree = "<group>";
+		};
 		73A137C61BA6EACB0033016A /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +240,7 @@
 				73F705221BA6E46400226EFC /* Util */,
 				73F705231BA6E46400226EFC /* Vendor */,
 				73A137C61BA6EACB0033016A /* Framework */,
+				735ED3F91BB02ED100FEB8D6 /* screenshots */,
 				73F704FA1BA6E41400226EFC /* AppDelegate.h */,
 				73F704FB1BA6E41400226EFC /* AppDelegate.m */,
 				73F704FD1BA6E41400226EFC /* ViewController.h */,
@@ -503,12 +520,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735ED3FE1BB02F3300FEB8D6 /* customScan.gif in Resources */,
 				73F7052C1BA6E46400226EFC /* CreateRQCodeViewController.xib in Resources */,
 				73F705021BA6E41400226EFC /* Main.storyboard in Resources */,
 				73F7055C1BA6E5D800226EFC /* zbar-back.png in Resources */,
 				73F705071BA6E41400226EFC /* LaunchScreen.xib in Resources */,
 				73F705041BA6E41400226EFC /* Images.xcassets in Resources */,
 				73F7055F1BA6E5D800226EFC /* zbar-samples.png in Resources */,
+				735ED3FD1BB02F3300FEB8D6 /* create.gif in Resources */,
+				735ED3FF1BB02F3300FEB8D6 /* normalScan.gif in Resources */,
 				73F7055D1BA6E5D800226EFC /* zbar-help.html in Resources */,
 				73F705361BA6E4F600226EFC /* ScanQRCodeViewController.xib in Resources */,
 				73F7055E1BA6E5D800226EFC /* zbar-helpicons.png in Resources */,
